@@ -78,7 +78,7 @@
                     <nav class="menu">
                         <ul class="sidebar-menu metismenu" id="sidebar-menu">
                             <li class="active">
-                                <a href="user.html">
+                                <a href="list">
                                     <i class="fa fa-user"></i> Quản lý thành viên </a>
                             </li>
 

@@ -20,6 +20,7 @@ Route::get('/list', 'userController@getList');
 Route::get('/add', 'userController@getAdd');
 Route::post('/add', 'userController@postAdd');
 Route::get('/edit/{idUser}', 'userController@getEdit');
+Route::post('/edit/{idUser}', 'userController@postEdit');
 
 //Model
 //Tạo model

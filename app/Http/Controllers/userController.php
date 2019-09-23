@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 //Gọi model
 use App\models\user;
 //Gọi form request
-use App\Http\Requests\AddUserRequest;
+use App\Http\Requests\{AddUserRequest, EditUserRequest};
 
 class userController extends Controller
 {
@@ -23,6 +23,18 @@ class userController extends Controller
         $data['user'] = user::find($idUser);
 
         echo view('edit', $data);
+    }
+
+    function postEdit(EditUserRequest $e, $idUser){
+        $user = user::find($idUser);
+        $user->full = $e->full;
+        $user->phone = $e->phone;
+        $user->address = $e->address;
+        $user->id_number = $e->id_number;
+        $user->save();
+
+        //Quay lại trang vừa submit dùng back();
+        return redirect()->back()->with('thongbao', 'Đã sửa thành công');
     }
 
     //Thay  $request thành AddUserRequest để kiểm tra validate

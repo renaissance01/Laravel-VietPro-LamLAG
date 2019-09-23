@@ -9,6 +9,7 @@
             <div class="row sameheight-container">
                 <div class="col-xl-12">
 
+                    <!--Hiển thị lỗi-->
                     @if(session('thongbao'))
                         <div class="alert alert-success" role="alert">
                             <strong>{{ session('thongbao') }}</strong>
